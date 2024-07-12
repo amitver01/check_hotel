@@ -3,7 +3,6 @@ require("dotenv").config();
 
 //const URL="mongodb://localhost:27017/check";
 const URL=process.env.DB_URL;
-//const URL="mongodb+srv://av2177980:KcSuwCMt3tGXYbzY@cluster0.eyz8psj.mongodb.net/";
 mongoose.connect(URL);
 
 const db=mongoose.connection;
