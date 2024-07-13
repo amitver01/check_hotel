@@ -1,8 +1,9 @@
 const mongoose = require("mongoose");
 require("dotenv").config();
 
-//const URL="mongodb://localhost:27017/check";
-const URL=process.env.DB_URL;
+
+const URL="mongodb://localhost:27017/check";
+//const URL=process.env.DB_URL;
 mongoose.connect(URL);
 
 const db=mongoose.connection;
@@ -19,5 +20,6 @@ db.on("error", (err) => {
 db.on("disconnected" , ()=>{
     console.log("disconnected to MONGODB server");
 });
+
 
 module.exports = db;
